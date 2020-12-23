@@ -128,6 +128,8 @@ const FoodDetails: React.FC = () => {
     } else {
       api.post(`favorites`, food);
     }
+
+    setIsFavorite(!isFavorite);
   }, [isFavorite, food]);
 
   const cartTotal = useMemo(() => {
